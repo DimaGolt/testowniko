@@ -1,16 +1,47 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../providers/quiz_provider.dart';
 import '../models/question.dart';
 
-class QuizScreen extends StatelessWidget {
+class QuizScreen extends StatefulWidget {
   const QuizScreen({super.key});
+
+  @override
+  State<QuizScreen> createState() => _QuizScreenState();
+}
+
+class _QuizScreenState extends State<QuizScreen> {
+  Timer? _timer;
+
+  @override
+  void initState() {
+    super.initState();
+    // Start a timer to refresh the UI every second to show updated elapsed time
+    _timer = Timer.periodic(const Duration(seconds: 1), (timer) {
+      if (mounted) setState(() {});
+    });
+  }
+
+  @override
+  void dispose() {
+    _timer?.cancel();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Testowniko'),
+        title: Consumer<QuizProvider>(
+          builder: (context, quiz, child) {
+            final duration = quiz.elapsedTime;
+            String twoDigits(int n) => n.toString().padLeft(2, "0");
+            String minutes = twoDigits(duration.inMinutes.remainder(60));
+            String seconds = twoDigits(duration.inSeconds.remainder(60));
+            return Text('Testowniko ($minutes:$seconds)');
+          },
+        ),
         centerTitle: true,
         leading: IconButton(
           icon: const Icon(Icons.close),
@@ -96,9 +127,9 @@ class QuizScreen extends StatelessWidget {
     Color? tileColor;
     if (isAnswered) {
       if (answer.isCorrect) {
-        tileColor = isSelected ? Colors.green.withOpacity(0.3) : Colors.green.withOpacity(0.15);
+        tileColor = isSelected ? Colors.green.withValues(alpha: 0.3) : Colors.green.withValues(alpha: 0.15);
       } else if (isSelected) {
-        tileColor = Colors.red.withOpacity(0.3);
+        tileColor = Colors.red.withValues(alpha: 0.3);
       }
     }
 
