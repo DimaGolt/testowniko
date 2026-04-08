@@ -1,0 +1,15 @@
+1. Jakiego koloru jest bezchmurne niebo w środku słonecznego dnia?
+a. Zielonego
+*b. Niebieskiego
+c. Czerwonego
+
+2. Które z poniższych zwierząt są ssakami?
+*a. Pies
+b. Krokodyl
+*c. Kot
+d. Żaba
+
+3. Ile wynosi wynik dodawania 2 + 2?
+a. 3
+b. 5
+*c. 4

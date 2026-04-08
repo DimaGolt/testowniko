@@ -1,0 +1,339 @@
+1. Zapewnienie możliwości obsługi 1000 transakcji na minutę to przykład:
+a. Wymagania krytycznego
+b. Wymagania funkcjonalnego
+*c. Wymagania pozafunkcjonalnego
+
+2. Studium wykonalności w projekcie informatycznym wykonuje się:
+*a. Przed dokonaniem pełnej analizy wymagań
+b. Na początku projektowania architektury systemu
+c. Po zakończeniu projektu, w ramach oceny jego wykonania
+
+3. Model kaskadowy wytwarzania oprogramowania sprawdza się w przypadku:
+*a. projektów o łatwym do określenia i stabilnych wymaganiach
+b. przedsięwzięć o nieprecyzyjnych i zmiennych wymaganiach
+c. złożonych projektów, obarczonych wysokim ryzykiem niepowodzenia
+
+4. Celem tworzenia prototypów oprogramowania jest:
+a. oszacowanie czasu trwania całego projektu
+b. zapoznanie zespołu z narzędziami i środowiskiem wytwórczym
+*c. minimalizacja ryzyka błędnego określenia wymagań
+
+5. W przypadku, gdy spodziewamy się dużej zmienności wymagań w trakcie projektu to
+a. Proces V sprawdzi się lepiej niż proces kaskadowy
+b. Sprawdzi się skonstruowanie prototypu
+*c. Sprawdzi się proces iteracyjny
+
+6. Dokumentacja wymagań w procesie RUP ma formę
+a. Hierarchicznej listy funkcji i podfunkcji
+b. Niesformalizowanego opisu słownego
+*c. Przypadków użycia
+
+7. Przyjęty czas trwania iteracji w metodykach zwinnych
+*a. Jest nieprzekraczalny
+b. Może w wyjątkowej sytuacji ulec wydłużeniu
+c. Dopasowuje się do aktualnej sytuacji
+
+8. Punkty obiektowe wyrażają:
+a. Jakość oprogramowania
+*b. Rozmiar oprogramowania
+c. skomplikowanie klas w programowaniu obiektowym
+
+9. W metodzie COCOMO przyjmuje się, że
+a. Łatwiej oszacować nakład pracy niż rozmiar oprogramowania
+b. Nakład pracy jest wprost proporcjonalny do rozmiaru oprogramowania
+*c. Szacowanie rozmiaru jest punktem wyjścia do szacowania nakładu pracy
+
+10. Poziomy dojrzałości procesu wytwarzania oprogramowania są zdefiniowane w:
+a. Normie ISO 9126
+b. Normie ISO 9001
+*c. Standardzie CMM
+
+11. Do analizy wymagań należy:
+a. Ocena jakości procesów biznesowych w firmie użytkownika
+*b. Określenie funkcji oferowanych przez oprogramowanie
+c. Dobranie właściwej technologii, która pozwoli zaimplementować wymagania
+
+12. Wymaganie by oprogramowanie było przenośne pomiędzy systemem Linux oraz MacOS jest:
+a. Wymaganiem funkcjonalnym
+*b. Wymaganiem pozafunkcjonalnym
+c. Wymaganiem zgodności
+
+13. Model V konstrukcji oprogramowania jest:
+a. Szczególnym przypadkiem modelu konstrukcji prototypów
+*b. Odmianą modelu kaskadowego o dużym nacisku na jakość tworzonego systemu
+c. Odmianą modelu spiralnego
+
+14. W porównaniu do procesu kaskadowego, proces iteracyjny charakteryzuje się:
+*a. Łatwiejszą adaptacją do zmian w wymaganiach
+b. Łatwiejszym planowaniem procesu (harmonogramu prac)
+c. Żadne z powyższych
+
+15. Proces wytwarzania oprogramowania rynkowego jest najlepiej odzwierciedlony jest:
+a. Model kaskadowy
+*b. Model spiralny
+c. Model wytwarzania transformacyjnego, np.: MDA
+
+16. Kolejne fazy RUP to:
+*a. Przygotowanie, opracowanie, konstrukcja, przekazanie
+b. Analiza wymagań, projektowanie, implementacja, testowanie
+c. Planowanie, analiza ryzyka, konstrukcja, atestowanie
+
+17. Dokumentacja wymagań w metodyce XP ma formę:
+a. Przypadków użycia, ale z pominięciem scenariuszy alternatywnych
+*b. Kilkuzadaniowych opisów, tzw. historii użytkowania
+c. W metodyce XP nie dokumentuje się wymagań
+
+18. W porównaniu do liczby linii kodu punkty funkcyjne są:
+*a. Łatwiejsze do wyznaczenia na początku projektu
+b. Trudniejsze do wyznaczenia na początku projektu
+c. Mniej miarodajne
+
+19. W metodzie COCOMO II do określenia rozmiaru oprogramowania wykorzystuje się:
+a. Tylko punkty funkcyjne
+b. Tylko punkty obiektowe
+*c. Zarówno punkty funkcyjne jak i obiektowe
+
+20. Pojęcie jakości oprogramowania jest zdefiniowane w :
+*a. Normie ISO 9126
+b. Normach z rodziny ISO 9000
+c. Standardzie CMM
+
+21. Dokumentacja wymagań w metodyce XP ma formę:
+a. Przypadków użycia, ale z pominięciem scenariuszy alternatywnych
+*b. Kilkuzadaniowych opisów, tzw. historii użytkowania
+c. W metodyce XP nie dokumentuje się wymagań
+
+22a. Dany jest ciąg wolnych przepływów pieniężnych generowanych przez projekt: CFi, gdzie i=1 …N – numer kolejnego roku prognozy. Rozpatrzymy dwie stopy dyskontowe r1 > r2, i wartości NPV1 i NPV2 dla tego projektu obliczone przy odpowiednio stopie dyskontowej r1 i r2. Które z poniższych jest zawsze prawdziwe:
+a. 2NPV1 + NPV2 < 3NPV1
+*b. NPV1 + NPV2 < 2*NPV2
+c. NPV1 + NPV2 < 2*NPV1
+
+22b. Dany jest ciąg wolnych przepływów pieniężnych generowanych przez projekt: CFi, gdzie i=1 …N – numer kolejnego roku prognozy. Rozpatrzymy dwie stopy dyskontowe r1 < r2, i wartości NPV1 i NPV2 dla tego projektu obliczone przy odpowiednio stopie dyskontowej r1 i r2. Które z poniższych jest zawsze prawdziwe:
+a. 2NPV1 + NPV2 < 3NPV1
+b. NPV1 + NPV2 < 2*NPV2
+*c. NPV1 + NPV2 < 2*NPV1
+
+23. Które zdanie jest prawdziwe?
+a. Zasadniczym celem inicjacji projektu jest zdefiniowanie uzasadnienia biznesowego natomiast przygotowanie projektu służy określeniu jego zakresu
+b. Przygotowanie projektu wymaga zatwierdzonego budżetu projektu, inicjacja zaś zatwierdzonych zasobów do realizacji projektu
+*c. Przygotowanie projektu służy zdefiniowaniu projektu (cele, zakres, rezultaty…), a inicjacja służy powołaniu i uruchomieniu struktur organizacyjnych realizujących projekt
+
+24. Zasadniczym wyzwaniem w zarządzaniu projektem informatycznym jest:
+a. zarządzanie ryzykiem i jakością
+*b. zarządzanie zakresem, czasem i budżetem
+c. zarządzanie zakresem i jakością
+
+25. Wymaganie by oprogramowanie było przenośne pomiędzy systemem Linux oraz MacOS jest:
+a. Wymaganiem funkcjonalnym
+*b. Wymaganiem pozafunkcjonalnym
+c. Wymaganiem zgodności
+
+26. Która z reakcji na ryzyko zmniejsza prawdopodobieństwo zrealizowania się ryzyka?
+*a. Wprowadzenie mechanizmów zabezpieczających przed wystąpieniem danego zdarzenia
+b. Zdefiniowanie planu awaryjnego na wypadek zrealizowania się ryzyka
+c. Wprowadzenie mechanizmów zabezpieczających przed skutkami danego zdarzenia
+
+27. Proces wytwarzania oprogramowania rynkowego jest najlepiej odzwierciedlony jest:
+a. Model kaskadowy
+*b. Model spiralny
+c. Model wytwarzania transformacyjnego, np.: MDA
+
+28. Które ze zdań jest prawdziwe?
+a. Zakres projektu w metodykach klasycznych (PRINCE2/PMBOK) nie podlega zmianom(tzw. Waterfall), może być zmieniany w metodykach zwinnych (AGILE)
+*b. Zakres projektu w metodykach zwinnych i klasycznych (PRINCE2/PMBOK) może być zmieniany
+c. Żadne z powyższych
+
+29. Sponsor projektu w prawidłowo zarządzanym przedsięwzięciu:
+*a. Może pełnić w projekcie kluczową rolę zarządczą
+b. Musi pełnić kluczową rolę zarządczą
+c. Nie może pełnić w projekcie kluczowej roli zarządczej
+
+30. Które ze zdań NIE jest prawdziwe?
+a. Suma luzów czynności wchodzących w skład ścieżki krytycznej jest większa równa 0
+b. Wydłużenie czasu realizacji zadania ze ścieżki krytycznej spowoduje wydłużenie projektu
+*c. Suma różnic czasów późnego startu i wczesnego startu czynności wchodzących w skład ścieżki krytycznej jest większa niż 0
+
+31. W harmonogramie projektu wyróżniono 10 czynności. Ścieżka krytyczna obejmuje 5 czynności. Suma czasów wykonania zadań nie wchodzących w skład ścieżki krytycznej:
+*a. Może być większa od długości ścieżki krytycznej
+b. Musi być mniejsza od długości ścieżki krytycznej
+c. Musi być taka, jak długość ścieżki krytycznego
+
+32. Która z poniższych odpowiedzi jest prawdziwa?
+a. Czas zakończenia projektu jest nie określony
+b. Projekt to przedsięwzięcie stale realizowane działalności firmy
+*c. Projekt to tymczasowe przedsięwzięcie w działalności firmy
+
+33. Które z poniższych stanowi ryzyko w projekcie informatycznym?
+a. Występujące w projekcie konflikty
+*b. Możliwość wzrostu cen pamięci
+c. Dzisiejsza awaria sieci i brak dostępu programistów do repozytorium
+
+34. Fakt, że dwa dowolne projekty inwestycyjne mają taką samą stopę zwrotu z inwestycji oznacza, że
+*a. Obie inwestycje są tak samo opłacalne i warte realizacji pod warunkiem, że stopa zwrotu jest wyższa od stopy zwrotu z inwestycji alternatywnych
+b. Obie inwestycje są tak samo opłacalne i warte realizacji
+c. Żadne z pozostałych
+
+35. Zasadniczym wyzwaniem w zarządzaniu projektem informatycznym jest zarządzanie:
+a. Zasobami ludzkimi
+*b. Zakresem
+c. Jakością
+
+36. Zakres projektu:
+*a. Może podlegać zmianom w metodykach klasycznych (PRINCE2/PMBOK)
+b. Zmiany zakresu projektu uwzględniają jedynie metodyki zwinne (AGILE)
+c. Jest niezmienny w projekcie realizowany metodykami klasycznymi (PRINCE2/PMBOK)
+
+37. W harmonogramie projektu wyróżniono 10 zadań, każde z nich wymaga tego samego czasu na realizację wynoszącego 13 dni. Które ze zdań jest prawdziwe biorąc pod uwagę wszystkie możliwe harmonogramy projektów o powyższej właściwości?
+a. Najmniejszy luz pojedynczej czynności w takim projekcie wynosi 13
+*b. Największy luz czynności w tym projekcie może być większy niż 13
+c. Suma luzów wszystkich zadań w projekcie jest większa niż 0 dla wszystkich projektów
+
+38. Plany awaryjne, jako sposób reakcji na ryzyko:
+a. Zmniejsza prawdopodobieństwo zrealizowania się ryzyka i ograniczają jego skutki
+*b. Zmniejszają skutki zrealizowania się ryzyka
+c. Żadne z pozostałych
+
+39. Cel przedsięwzięcia:
+a. Nie musi być osiągalny w przypadku programu i musi być osiągany w przypadku projektu
+*b. Musi być osiągalny w przypadku programu i musi być osiągalny w przypadku projektu
+c. Nie musi być zdefiniowany w programie, musi być określony w projekcie
+
+40a. W harmonogramie występuje następująca struktura zadań (A | B | C) -> (D | E | F), gdzie „|” znaczy wykonanie równoległe z inną czynnością, a „->” – wykonanie czynności po zakończeniu grupy czynności. Niech T[i] oznacza czas wykonania czynności i ze zbioru czynności {A,B,C,D,E,F}. Długości ścieżki krytycznej wynosi:
+a. min{T[A], T[B], T[C]} + min{T[D], T[E], T[F]}
+b. max {T[A], T[B], T[C], T[E], T[F]}
+*c. max{T[A], T[B], T[C]} + max {T[D], T[E], T[F]}
+
+40b. W harmonogramie występuje następująca struktura zadań (A | B | C) -> ( D ) ->(E | F), gdzie „|” znaczy wykonanie równoległe z inną czynnością, a „->” – wykonanie czynności po zakończeniu grupy czynności. Niech T[i] oznacza czas wykonania czynności i ze zbioru czynności {A,B,C,D,E,F}. Długości ścieżki krytycznej wynosi:
+a. max {T[A], T[B], T[C], T[E], T[F]}
+b. min{T[A], T[B], T[C]} + min {T[D]} + min {T[E], T[F]) }
+*c. max{T[A], T[B], T[C]} + T[D] + max {T[E], T[F]) }
+
+41. Które z poniższych stanowi ryzyko w projekcie informatycznym?
+*a. Zdarzenie, które może nastąpić za tydzień
+b. Zdarzenie, które wydarzyło się tydzień temu
+c. Zdarzenie, które nastąpi za tydzień
+
+42. Obsadzenie sponsora w roli kluczowego decydenta w projekcie:
+a. Nie wymaga żadnych dodatkowych czynności, gdyż z uwagi na możliwości decyzyjne jest to właściwa osoba do roli kluczowego zarządzania projekcie
+b. Nie jest praktykowane, z uwagi na obciążenie takiej osoby innymi obowiązkami
+*c. Wymaga rozważenia zakres jego innych obowiązków
+
+43. Które ze zdań jest prawdziwe? Wybierz jedną odpowiedź:
+*a. Inicjacja projektu kończy się zatwierdzeniem jego realizacji
+b. Inicjacja projektu wymaga decyzji o przystąpieniu do jego realizacji
+c. Przygotowanie i inicjacja projektu to w istocie te same czynności
+
+44. Według standardu CMM celem firmy powinno byc:
+a. znalezienie optymalnego procesu wytwarzania
+*b. ciągłe optymalizowanie procesu wytwarzania
+c. dążenie do osiągnięcia maksymalnego zadowolenia użytkowników
+
+45. Według normy ISO 9126 oprogramowanie jest użyteczne jeśli
+a. posiada potrzebne użytkownikowi funkcje
+*b. jest łatwe do nauczenia sie
+c. jest odporne na bledy środowiska (np. utrata dostępu do sieci)
+
+46. W metodzie COCOMO II dokładność szacowania
+*a. rośnie z postępem prac
+b. maleje z postępem prac
+c. nie zależy od postępu prac
+
+47. W porównaniu do liczby linii kodu, punkty funkcyjne są
+*a. łatwiejsze do wyznaczenia na początku projektu
+b. trudniejsze do wyznaczenia na początku projektu
+c. mniej miarodajne
+
+48. RUP jest procesem:
+a. kaskadowym z możliwością nawrotów
+b. opartym na budowie prototypów
+*c. iteracyjno-przyrostowym
+
+49. Proces iteracyjny charakteryzuje sie
+*a. koniecznością wykonywania testów regresyjnych
+b. ułatwionym harmonogramem prac
+c. utrudnionym wprowadzaniem zmian
+
+50. Model V konstrukcji oprogramowania jest:
+a. odmiana modelu przyrostowego
+*b. odmiana modelu kaskadowego
+c. odmiana modelu spiralnego
+
+51. Zgodę na zmianę kosztów w umowie dot. projektów wydaje
+a. kierownik projektu
+*b. komitet sterujący projektu
+c. żadne z powyższych
+
+52. które ze stwierdzeń na temat wymagań jest nieprawdziwe:
+*a. łatwość usuwania błędów w systemie nie jest wymaganiem
+b. wymaganie pozafunkcjonalne może przekształcić sie w wymaganie funkcjonalne
+c. wymagania użytkownika są bardziej ogólne niż wymagania systemowe
+
+53. Które z poniższych stanowi ryzyko w projekcie informatycznym?
+a. zaplanowany na przyszły tydzień wzrost cen licencji niezbędnego oprogramowania
+*b. przewidywany z prawdopodobieństwem 10% wzrost cen licencji niezbędnego oprogramowania w przyszłym tygodniu
+c. wzrost cen licencji niezbędnego oprogramowania, który nastąpił w zeszłym tygodniu
+
+54. Które ze zdań jest prawdziwe?
+a. wszyscy członkowie zespołu projektowego muszą zostać określeni w fazie koncepcji
+b. problemy z oprogramowaniem naprawiane są w fazie zakończenia projektu
+*c. szczegółowe wymagania techniczne mogą być ustalane w fazie wykonania projektu
+
+55. W przypadku metody wartości zaktualizowanej netto (NPV), jak zwykle określa się stopę dyskontową?
+a. jako oczekiwany procent zwrotu z planowanej inwestycji
+*b. jako procent zwrotu którego oczekują dostarczyciele kapitału do inwestycji
+c. jako współczynnik przewidywalnych zysków do przewidywalnych kosztów
+
+56. Przeniesienie, jako sposób reakcji na ryzyko:
+a. realizowania się ryzyka
+b. zmniejsza prawdopodobieństwo zrealizowania się ryzyka i ogranicza jego skutki
+*c. żadne z powyższych
+
+57. Do analizy przedwdrożeniowej należy:
+*a. ocena jakości procesów biznesowych w firmie użytkownika
+b. usprawnienie procesów biznesowych w firmie użytkownika
+c. żadne z powyższych
+
+58. Celem studium wykonalności w projekcie informatycznym jest:
+*a. ocena zasadności projektu
+b. ocena bieżących postępów w projekcie
+c. ocena zrealizowanego zakresu projektu (na jego koniec)
+
+59. Punkty obiektowe:
+a. są mniej miarodajne niż liczba linii kodu
+*b. są łatwiejsze do policzenia niż punkty funkcyjne
+c. powstały z myślą o programowaniu obiektowym
+
+60. W metodzie COCOMO przyjmuje się, że:
+a. nakład pracy jest wprost proporcjonalny do rozmiaru oprogramowania
+b. nakład pracy nie zależy od rozmiaru oprogramowania
+*c. łatwiej oszacować rozmiar oprogramowania niż nakład pracy
+
+61. Wg normy ISO 9126 oprogramowanie jest funkcjonalne jeśli:
+*a. nie posiada zbędnych funkcji
+b. jego funkcje są łatwe do zrozumienia dla użytkownika
+c. pozwala na łatwe wprowadzanie zmian w funkcjonalności
+
+61b. Wg standardu CMM celem firmy powinno być:
+a. dążenie do osiągnięcia maksymalnej jakości produktu
+b. dążenie do osiągnięcia maksymalnego zadowolenia użytkowników
+*c. pomiary i optymalizacja procesu wytwarzania produktu
+
+62. Która z poniższych metod szacowania nakładów inwestycyjnych jest najmniej precyzyjna?
+a. szacowanie z dołu do góry
+*b. szacowanie z góry na dół
+c. przez analizę ofert dostawców
+
+63. Przeniesienie, jako sposób reakcji na ryzyko:
+a. ….. zrealizowania się ryzyka
+b. zmniejsza prawdopodobieństwo zrealizowania się ryzyka i jego skutki
+*c. żadne z powyższych
+
+64. W harmonogramie projektu wyróżniono czynności A, B, C, D, E, F. Ścieżka krytyczna obejmuje A, B, C i D. Suma czasów wykonania zadań E i F:
+a. musi być mniejsza od długości ścieżki krytycznej
+b. może być większa od długości ścieżki krytycznej, ale musi być mniejsza niż dwukrotność ścieżki krytycznej
+*c. może być większa od dwukrotności długości ścieżki krytycznej.
+
+65. Która z reakcji na ryzyko umożliwia stworzenie planu awaryjnego na wypadek zalania serwerowni powodzią?
+a. budowa serwerowni w miejscu gdzie historycznie nie występowały powodzie
+b. ubezpieczenie wykupione na wypadek zalania
+*c. budowa zapasowej serwerowni w innej lokalizacji
