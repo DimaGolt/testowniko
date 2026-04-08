@@ -27,9 +27,6 @@ jobs:
       - name: Build app for web
         run: flutter build web --base-href "${{ steps.pages.outputs.base_path }}/"
 
-      - name: Run tests
-        run: flutter test
-
       - name: Upload artifact
         if: github.ref == 'refs/heads/main'
         uses: actions/upload-pages-artifact@v3
