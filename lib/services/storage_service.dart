@@ -6,6 +6,7 @@ class StorageService {
   static const String _keyMaxExtraReps = 'max_extra_repetitions';
   static const String _keyMaxActive = 'max_active_questions';
   static const String _keyDarkMode = 'dark_mode';
+  static const String _keyShuffleAnswers = 'shuffle_answers';
   static const String _keyRecentFiles = 'recent_files_v2'; // New key for map
 
   Future<void> saveSettings({
@@ -13,12 +14,14 @@ class StorageService {
     required int maxExtraReps,
     required int maxActive,
     required bool isDarkMode,
+    required bool shuffleAnswers,
   }) async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.setInt(_keyTargetReps, targetReps);
     await prefs.setInt(_keyMaxExtraReps, maxExtraReps);
     await prefs.setInt(_keyMaxActive, maxActive);
     await prefs.setBool(_keyDarkMode, isDarkMode);
+    await prefs.setBool(_keyShuffleAnswers, shuffleAnswers);
   }
 
   Future<Map<String, dynamic>> loadSettings() async {
@@ -28,6 +31,7 @@ class StorageService {
       'maxExtraReps': prefs.getInt(_keyMaxExtraReps) ?? 4,
       'maxActiveQuestions': prefs.getInt(_keyMaxActive) ?? 8,
       'isDarkMode': prefs.getBool(_keyDarkMode) ?? false,
+      'shuffleAnswers': prefs.getBool(_keyShuffleAnswers) ?? true,
     };
   }
 

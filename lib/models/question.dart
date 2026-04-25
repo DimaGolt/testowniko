@@ -10,7 +10,7 @@ class Answer {
 class Question {
   final String id;
   final String content;
-  final List<Answer> answers;
+  List<Answer> answers;
   final bool isMultipleChoice;
   int repetitionsDone;
   int requiredRepetitions;

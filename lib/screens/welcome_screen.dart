@@ -35,6 +35,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
         settings['maxExtraReps'],
         settings['isDarkMode'],
         maxActive: settings['maxActiveQuestions'] ?? 8,
+        shuffleAnswers: settings['shuffleAnswers'] ?? true,
       );
       setState(() {
         _recentFiles = recent;
@@ -166,6 +167,13 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                   ),
 
                   SwitchListTile(
+                    title: const Text('Losowa kolejność odpowiedzi'),
+                    subtitle: const Text('Odpowiedzi będą tasowane przy każdym pytaniu'),
+                    value: quizProvider.shuffleAnswers,
+                    onChanged: (val) => _updateSettings(shuffleAnswers: val),
+                  ),
+
+                  SwitchListTile(
                     title: const Text('Tryb ciemny'),
                     value: quizProvider.isDarkMode,
                     onChanged: (val) => _updateSettings(dark: val),
@@ -195,19 +203,21 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
     );
   }
 
-  void _updateSettings({int? target, int? maxExtra, bool? dark, int? maxActive}) {
+  void _updateSettings({int? target, int? maxExtra, bool? dark, int? maxActive, bool? shuffleAnswers}) {
     final quiz = context.read<QuizProvider>();
     final newTarget = target ?? quiz.targetReps;
     final newMaxExtra = maxExtra ?? quiz.maxExtraReps;
     final newDark = dark ?? quiz.isDarkMode;
     final newMaxActive = maxActive ?? quiz.maxActiveQuestions;
-    
-    quiz.updateSettings(newTarget, newMaxExtra, newDark, maxActive: newMaxActive);
+    final newShuffle = shuffleAnswers ?? quiz.shuffleAnswers;
+
+    quiz.updateSettings(newTarget, newMaxExtra, newDark, maxActive: newMaxActive, shuffleAnswers: newShuffle);
     _storageService.saveSettings(
       targetReps: newTarget,
       maxExtraReps: newMaxExtra,
       maxActive: newMaxActive,
       isDarkMode: newDark,
+      shuffleAnswers: newShuffle,
     );
   }
 }
