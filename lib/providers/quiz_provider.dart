@@ -13,6 +13,7 @@ class QuizProvider with ChangeNotifier {
   int _maxExtraReps = 4;
   int _maxActiveQuestions = 8;
   bool _isDarkMode = false;
+  bool _shuffleAnswers = true;
 
   // State for current question
   List<int> _selectedAnswerIndices = [];
@@ -28,6 +29,7 @@ class QuizProvider with ChangeNotifier {
   int get toRepeatCount => _allQuestions.where((q) => q.status == QuestionStatus.toRepeat).length;
 
   bool get isDarkMode => _isDarkMode;
+  bool get shuffleAnswers => _shuffleAnswers;
   int get targetReps => _targetReps;
   int get maxExtraReps => _maxExtraReps;
   int get maxActiveQuestions => _maxActiveQuestions;
@@ -54,11 +56,12 @@ class QuizProvider with ChangeNotifier {
     _pickNextQuestion();
   }
 
-  void updateSettings(int target, int maxExtra, bool dark, {int? maxActive}) {
+  void updateSettings(int target, int maxExtra, bool dark, {int? maxActive, bool? shuffleAnswers}) {
     _targetReps = target;
     _maxExtraReps = maxExtra;
     _isDarkMode = dark;
     if (maxActive != null) _maxActiveQuestions = maxActive;
+    if (shuffleAnswers != null) _shuffleAnswers = shuffleAnswers;
     notifyListeners();
   }
 
@@ -102,6 +105,9 @@ class QuizProvider with ChangeNotifier {
     currentWorkingPool.shuffle(_random);
     Question next = currentWorkingPool.first;
     _currentIndex = _allQuestions.indexOf(next);
+
+    // Shuffle answer order so user learns content, not position
+    if (_shuffleAnswers) next.answers.shuffle(_random);
 
     notifyListeners();
   }
