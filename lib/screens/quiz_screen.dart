@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 import '../providers/quiz_provider.dart';
 import '../models/question.dart';
@@ -29,72 +30,101 @@ class _QuizScreenState extends State<QuizScreen> {
     super.dispose();
   }
 
+  KeyEventResult _onKey(FocusNode node, KeyEvent event) {
+    if (event is! KeyDownEvent) return KeyEventResult.ignored;
+    final quiz = context.read<QuizProvider>();
+    final question = quiz.currentQuestion;
+    if (question == null) return KeyEventResult.ignored;
+
+    final key = event.logicalKey;
+    if (key == LogicalKeyboardKey.enter || key == LogicalKeyboardKey.numpadEnter) {
+      if (quiz.isAnswered) {
+        quiz.goToNext();
+      } else if (question.isMultipleChoice && quiz.selectedAnswerIndices.isNotEmpty) {
+        quiz.validateAnswer();
+      }
+      return KeyEventResult.handled;
+    }
+
+    // Keys 1-9 select anwser (also numpad)
+    final n = int.tryParse(event.character ?? '');
+    if (n != null && n >= 1 && n <= question.answers.length) {
+      quiz.selectAnswer(n - 1);
+      return KeyEventResult.handled;
+    }
+    return KeyEventResult.ignored;
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Consumer<QuizProvider>(
+    return Focus(
+      autofocus: true,
+      onKeyEvent: _onKey,
+      child: Scaffold(
+        appBar: AppBar(
+          title: Consumer<QuizProvider>(
+            builder: (context, quiz, child) {
+              final duration = quiz.elapsedTime;
+              String twoDigits(int n) => n.toString().padLeft(2, "0");
+              String minutes = twoDigits(duration.inMinutes.remainder(60));
+              String seconds = twoDigits(duration.inSeconds.remainder(60));
+              return Text('Testowniko ($minutes:$seconds)');
+            },
+          ),
+          centerTitle: true,
+          leading: IconButton(
+            icon: const Icon(Icons.close),
+            onPressed: () => _showExitDialog(context),
+          ),
+        ),
+        body: Consumer<QuizProvider>(
           builder: (context, quiz, child) {
-            final duration = quiz.elapsedTime;
-            String twoDigits(int n) => n.toString().padLeft(2, "0");
-            String minutes = twoDigits(duration.inMinutes.remainder(60));
-            String seconds = twoDigits(duration.inSeconds.remainder(60));
-            return Text('Testowniko ($minutes:$seconds)');
-          },
-        ),
-        centerTitle: true,
-        leading: IconButton(
-          icon: const Icon(Icons.close),
-          onPressed: () => _showExitDialog(context),
-        ),
-      ),
-      body: Consumer<QuizProvider>(
-        builder: (context, quiz, child) {
-          final question = quiz.currentQuestion;
+            final question = quiz.currentQuestion;
 
-          if (question == null) {
-            // Quiz finished
-            WidgetsBinding.instance.addPostFrameCallback((_) {
-              Navigator.pushReplacementNamed(context, '/result');
-            });
-            return const Center(child: CircularProgressIndicator());
-          }
+            if (question == null) {
+              // Quiz finished
+              WidgetsBinding.instance.addPostFrameCallback((_) {
+                Navigator.pushReplacementNamed(context, '/result');
+              });
+              return const Center(child: CircularProgressIndicator());
+            }
 
-          return Center(
-            child: ConstrainedBox(
-              constraints: const BoxConstraints(maxWidth: 800),
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: [
-                    _buildStats(quiz),
-                    const SizedBox(height: 20),
-                    Expanded(
-                      child: SingleChildScrollView(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              question.content,
-                              style: Theme.of(context).textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.bold),
-                            ),
-                            const SizedBox(height: 24),
-                            ...List.generate(question.answers.length, (index) {
-                              return _buildAnswerTile(context, quiz, question, index);
-                            }),
-                          ],
+            return Center(
+              child: ConstrainedBox(
+                constraints: const BoxConstraints(maxWidth: 800),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: [
+                      _buildStats(quiz),
+                      const SizedBox(height: 20),
+                      Expanded(
+                        child: SingleChildScrollView(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                question.content,
+                                style: Theme.of(context).textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.bold),
+                              ),
+                              const SizedBox(height: 24),
+                              ...List.generate(question.answers.length, (index) {
+                                return _buildAnswerTile(context, quiz, question, index);
+                              }),
+                            ],
+                          ),
                         ),
                       ),
-                    ),
-                    const SizedBox(height: 20),
-                    _buildActionButtons(context, quiz, question),
-                  ],
+                      const SizedBox(height: 20),
+                      _buildActionButtons(context, quiz, question),
+                    ],
+                  ),
                 ),
               ),
-            ),
-          );
-        },
+            );
+          },
+        ),
       ),
     );
   }
